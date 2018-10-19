@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python:
+    #image: "python:3.7"
+    build:
+      context: .
+      dockerfile: docker/dev/python/Dockerfile
+    ports:
+      - 8080:8000
+    command: python manage.py runserver 0.0.0.0:8000
+
